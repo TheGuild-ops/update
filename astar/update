@@ -1,0 +1,10 @@
+apt-get update && apt-get upgrade -y
+VERSION=${1}
+NAME=${2}
+systemctl stop $NAME
+rm astar-collator*
+wget https://github.com/AstarNetwork/Astar/releases/download/v${VERSION}/astar-collator-${VERSION}-ubuntu-x86_64.tar.gz
+tar -xf  astar-collator-${VERSION}-ubuntu-x86_64.tar.gz
+chmod +x astar-collator
+systemctl start $NAME
+rm astar-collator-*
