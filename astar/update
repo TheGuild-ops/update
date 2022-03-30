@@ -8,3 +8,4 @@ tar -xf  astar-collator-${VERSION}-ubuntu-x86_64.tar.gz
 chmod +x astar-collator
 systemctl start $NAME
 rm astar-collator-*
+rm up*
