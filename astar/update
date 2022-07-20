@@ -8,5 +8,5 @@ wget https://github.com/AstarNetwork/Astar/releases/download/v${VERSION}/astar-c
 tar -xf  astar-collator.tar.gz
 chmod +x astar-collator
 systemctl start $NAME
-rm astar-collator-*
+rm astar-collator*
 rm up*
