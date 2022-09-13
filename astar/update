@@ -1,7 +1,8 @@
 apt-get update && apt-get upgrade -y
+apt autoremove
 VERSION=${1}
 NAME=${2}
-systemctl daemon-reload
+
 systemctl stop $NAME
 rm astar-collator*
 wget https://github.com/AstarNetwork/Astar/releases/download/v${VERSION}/astar-collator-v${VERSION}-ubuntu-x86_64.tar.gz -O astar-collator.tar.gz 
